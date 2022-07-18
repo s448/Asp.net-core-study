@@ -1,0 +1,19 @@
+﻿@model List<training.Models.Teacher>
+
+<table class="rwd-table">
+    <tr>
+        <th>Teacher name</th>
+        <th>Teacher Id</th>
+        <th>Teacher Number</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var teacher in Model)
+    {
+        <tr>
+            <td data-th="Movie Title"><a href="/Teacher/GetDetails/@teacher.teacherId">@teacher.teacherName</a><a/></td>
+            <td data-th="Id">@teacher.teacherId</td>
+            <td data-th="Number">@teacher.teacherNo</td>
+            <td><a href="/Teacher/DeleteTeacher/@teacher.teacherId"/>Delete Item</td>
+        </tr>
+    }
+</table>
